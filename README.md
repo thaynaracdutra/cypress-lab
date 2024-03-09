@@ -2,4 +2,4 @@
 - Automation: Cypress
 - Report: Mochawesome
 - CI: GitHub Actions
-- Cloud: AWS
+- Cloud: AWS S3
