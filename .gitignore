@@ -1,0 +1,7 @@
+# Env files
+.env*
+!.env.example
+
+/cypress/videos/
+/cypress/screenshots/
+/cypress/reports/
