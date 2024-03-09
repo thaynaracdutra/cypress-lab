@@ -15,6 +15,25 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import formsElements from './pages/registrationElements.js';'./pages/formsElements.js'
+import homeElements from './pages/homeElements.js';'./pages/homeElements.js'
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+const app = window.top;
+if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+  const style = app.document.createElement('style');
+  style.innerHTML = '.command-name-request, .command-name-xhr { display: none }';
+  style.setAttribute('data-hide-command-log-request', '');
+  
+  app.document.head.appendChild(style);
+}
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+   return false
+ })
+
+Cypress.Commands.add('accessRegistrationForms', () => {
+  cy.visit("https://demoqa.com/automation-practice-form");
+  cy.viewport(1280, 720)
+ // cy.get(homeElements.formsPageButton).click()
+ // cy.get(formsElements.accessRegistration).click()
+})

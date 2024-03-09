@@ -4,4 +4,7 @@
 
 /cypress/videos/
 /cypress/screenshots/
-/cypress/reports/
+/cypress/records/
+
+/cypress/report
+
