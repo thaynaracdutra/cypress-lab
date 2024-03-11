@@ -3,11 +3,30 @@ name:  E2E Tests
 on: push
 
 jobs:
-  chrome:
-    runs-on: ubuntu-22.04
-    name: E2E on Chrome
+  cypress-test:
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - uses: cypress-io/github-action@v6
         with:
           browser: chrome
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run e2e tests
+      run: npm run cy:run 
+
+    - name: Upload report to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_DIR: "cypress/reports/mochawesome"
+        DEST_DIR: "s3://mochawesome-report-github-actions"  
+
