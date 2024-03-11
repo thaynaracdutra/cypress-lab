@@ -1,2 +1,5 @@
-# Cypress-repository
-This is my personal repository of automated tests performed with Cypress
+# Learnings in this repository
+- Automation: Cypress
+- Report: Mochawesome
+- CI: GitHub Actions
+- Cloud: AWS S3
