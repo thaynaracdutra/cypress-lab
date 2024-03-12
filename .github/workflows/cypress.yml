@@ -23,8 +23,8 @@ jobs:
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
-          source_dir: "cypress/reports/mochawesome"
-          dest_dir: "arn:aws:s3:::mochawesome-report-github-actions" 
+          src: "cypress/reports/mochawesome"
+          dest: "arn:aws:s3:::mochawesome-report-github-actions" 
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
