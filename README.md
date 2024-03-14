@@ -1,6 +1,6 @@
-# Learnings in this repository 
+# Cypress E2E Test Automation Repository
 
-A repository of continuous learning about e2e test automation with cypress.
+This repository is dedicated to the continuous learning of Cypress E2E test automation.
 
 ### Test suite
 ✔️ Cypress 
