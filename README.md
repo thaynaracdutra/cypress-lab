@@ -7,6 +7,7 @@ A repository of continuous learning about e2e test automation with cypress.
 
 ### CI/CD
 ✔️ GitHub Actions
+
 ✔️ Mochawesome
   
 ### Cloud
