@@ -2,9 +2,12 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
+    retries: {
+      runMode: 2,
+      openMode: 1,
     },
   },
+  
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/report/mochawesome-report",

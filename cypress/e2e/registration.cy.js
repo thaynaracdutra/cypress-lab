@@ -1,9 +1,5 @@
 /// <reference types="cypress" />
 
-import {fa, faker} from '@faker-js/faker';
-
-import registrationElements from "../support/pages/registrationElements";
-
 describe('Registration tests', () => {
   it('Registration sucessefully', () => {
     // cy.accessRegistrationForms()

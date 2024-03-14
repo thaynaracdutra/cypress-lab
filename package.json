@@ -5,11 +5,15 @@
   },
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "lint": "eslint ."
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
     "@faker-js/faker": "^8.4.1",
     "aws-s3-uploader": "^1.0.3-beta",
+    "eslint": "^8.57.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0"
   }
