@@ -3,11 +3,11 @@
 A repository of continuous learning about e2e test automation with cypress.
 
 ### Test suite
-* ✔️ Cypress 
+✔️ Cypress 
 
 ### CI/CD
-* ✔️ GitHub Actions
-* ✔️ Mochawesome
+✔️ GitHub Actions
+✔️ Mochawesome
   
 ### Cloud
-* ✔️ Amazon S3
+✔️ Amazon S3
